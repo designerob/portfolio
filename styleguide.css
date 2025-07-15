@@ -29,6 +29,18 @@
   --color-primitives-green-200: rgba(207, 247, 211, 1);
 }
 
+/*
+
+To enable a theme in your HTML, simply add one of the following data attributes to an HTML element, like so:
+
+<body data-color-mode="SDS-light">
+    <!-- the rest of your content -->
+</body>
+
+You can apply the theme on any DOM node, not just the `body`
+
+*/
+
 [data-color-mode="SDS-light"] {
   --color-text-positive-default: var(--color-primitives-green-800);
   --color-text-positive-on-positive-secondary: var(--color-primitives-green-800);
