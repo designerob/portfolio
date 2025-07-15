@@ -1,7 +1,7 @@
 .frame {
   display: flex;
   flex-direction: column;
-  height: 6688px;
+  min-height: 100vh;
   width: 1280px;
   align-items: flex-start;
   position: relative;
@@ -34,6 +34,8 @@
   .frame .frame-wrapper,
   .frame .work-card,
   .frame .work-card-2 {
+    min-height: 1px;
+    height: auto;
     width: 100%;
   }
   
@@ -403,8 +405,8 @@
   position: relative;
   align-self: stretch;
   width: 100%;
-  height: 4433px;
   background-color: #ffffff;
+  margin-bottom: 0;
 }
 
 .frame .overlap {
@@ -438,13 +440,15 @@
 }
 
 .frame .work-cards-mobile {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 150px;
-  position: absolute;
-  top: 164px;
-  left: 43px;
+  gap: 60px;
+  position: relative;
+  top: unset;
+  left: unset;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .frame .work-card {
@@ -601,12 +605,13 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  padding: 0px 100px 70px;
+  padding: 0px 20px 40px;
   position: relative;
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
   background-color: #ffffff;
+  margin-top: auto;   /* Pushes footer to bottom if space allows */
 }
 
 .frame .footer-info {
@@ -801,4 +806,45 @@
   letter-spacing: 0;
   line-height: 30px;
   white-space: nowrap;
+}
+@media screen and (max-width: 1280px) {
+  .frame {
+    width: 100%;
+  }
+  .frame .navigation,
+  .frame .header,
+  .frame .logos-section,
+  .frame .skills-section,
+  .frame .latest-work-section,
+  .frame .footer {
+    width: 100%;
+  }
+  .frame .work-cards-mobile {
+    width: 100%;
+    margin: 0 auto;
+    gap: 40px;
+  }
+  .frame .work-card,
+  .frame .work-card-2 {
+    width: 100%;
+    min-height: 1px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .frame .work-cards-mobile {
+    width: 100%;
+    gap: 30px;
+    padding: 0 10px;
+  }
+  .frame .work-card,
+  .frame .work-card-2 {
+    width: 100%;
+    min-height: 1px;
+    height: auto;
+  }
+  .frame .footer {
+    padding: 0px 10px 20px;
+  }
 }
