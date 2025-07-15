@@ -449,6 +449,7 @@
   left: unset;
   width: 100%;
   margin: 0 auto;
+  margin-top: 174px;
 }
 
 .frame .work-card {
@@ -837,6 +838,7 @@
     width: 100%;
     gap: 30px;
     padding: 0 10px;
+    margin-top: 100px;
   }
   .frame .work-card,
   .frame .work-card-2 {
